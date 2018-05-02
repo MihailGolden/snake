@@ -10,7 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
+            Console.SetBufferSize(120, 30);
 
             //Border drawing
             HorizontalLine upLine = new HorizontalLine(0,78,0,'+');
@@ -24,8 +24,9 @@ namespace Snake
 
             //Points drawing
             Point p = new Point(4, 5, '*');
-            p.Draw();
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
 
+            snake.Draw();
             Console.ReadLine();
         }
 
