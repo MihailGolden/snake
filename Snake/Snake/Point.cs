@@ -66,5 +66,30 @@ namespace Snake
         {
             return x + ", " + y + ", " + sym;
         }
+
+        public int GetX()
+        {
+            return x;
+        }
+
+        public int GetY()
+        {
+            return y;
+        }
+
+        public char GetSym()
+        {
+            return sym;
+        }
+
+        public void SetSym( char sym)
+        {
+            this.sym = sym;
+        }
+
+        internal bool IsHit(Point food)
+        {
+            return x == food.GetX() && y == food.GetY();
+        }
     }
 }
